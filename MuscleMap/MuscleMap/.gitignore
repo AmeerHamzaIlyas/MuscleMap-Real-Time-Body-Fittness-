@@ -1,0 +1,8 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+MuscleMap.Web/musclemap.db
+MuscleMap.Web/musclemap.db-shm
+MuscleMap.Web/musclemap.db-wal

@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "MuscleMap.Web": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "splash.html",
+      "applicationUrl": "http://localhost:5180",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

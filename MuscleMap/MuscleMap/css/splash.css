@@ -1,0 +1,126 @@
+.splash-body {
+  margin: 0;
+  min-height: 100vh;
+  background: #07080a;
+  overflow: hidden;
+}
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 35%, #1a1010 0%, #07080a 55%);
+  z-index: 1000;
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+
+.splash-screen.exit {
+  opacity: 0;
+  transform: scale(1.04) translateY(-12px);
+  pointer-events: none;
+}
+
+.splash-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 60, 60, 0.35), transparent 70%);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.splash-logo {
+  width: 120px;
+  height: 120px;
+  z-index: 1;
+  animation: logoFloat 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 24px rgba(255, 60, 60, 0.45));
+}
+
+.splash-title {
+  margin-top: 22px;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #ff3c3c;
+  z-index: 1;
+  animation: titleFade 1s ease 0.2s both;
+}
+
+.splash-tagline {
+  margin-top: 8px;
+  color: #aaa;
+  font-size: 14px;
+  z-index: 1;
+  animation: titleFade 1s ease 0.45s both;
+}
+
+.splash-loader {
+  margin-top: 28px;
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.splash-loader span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff3c3c;
+  animation: dotBounce 1s ease-in-out infinite;
+}
+
+.splash-loader span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.splash-loader span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes titleFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dotBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}

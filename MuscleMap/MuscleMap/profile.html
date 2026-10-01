@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile — MuscleMap</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="profile-body">
+    <header class="profile-topbar">
+      <a href="index.html" class="back-link">← Back to App</a>
+      <img src="./assets/logo.svg" alt="" class="topbar-logo" />
+    </header>
+
+    <main class="profile-main">
+      <section class="profile-card profile-hero">
+        <div id="profileAvatar" class="profile-avatar">U</div>
+        <div>
+          <h1 id="profileName">User</h1>
+          <p id="profileEmail">email@example.com</p>
+          <p id="profileJoined" class="profile-meta">Member since —</p>
+        </div>
+      </section>
+
+      <section class="profile-card">
+        <h2>Your stats</h2>
+        <div class="profile-stats">
+          <div class="profile-stat">
+            <span id="statFavCount">0</span>
+            <small>Favorites</small>
+          </div>
+          <div class="profile-stat">
+            <span id="statMuscleCount">12</span>
+            <small>Muscle groups</small>
+          </div>
+          <div class="profile-stat">
+            <span id="statExerciseCount">120</span>
+            <small>Exercises</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-card">
+        <h2>Preferences</h2>
+        <form id="settingsForm" class="settings-form">
+          <label>
+            Theme
+            <select name="theme">
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+            </select>
+          </label>
+
+          <label>
+            Units
+            <select name="units">
+              <option value="metric">Metric (kg)</option>
+              <option value="imperial">Imperial (lb)</option>
+            </select>
+          </label>
+
+          <label>
+            Default difficulty filter
+            <select name="defaultDifficulty">
+              <option value="All">All</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="animations" />
+            Enable smooth animations
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="showWorkoutTips" />
+            Show workout coaching tips
+          </label>
+
+          <button type="submit" class="primary-btn">Save Settings</button>
+          <p id="settingsStatus" class="settings-status"></p>
+        </form>
+      </section>
+
+      <section class="profile-card danger-zone">
+        <h2>Account</h2>
+        <p class="section-subtitle">Sign out from this device.</p>
+        <button type="button" id="logoutBtn" class="secondary-btn logout-btn">
+          Log out
+        </button>
+      </section>
+    </main>
+
+    <script src="./js/db.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/profile.js"></script>
+  </body>
+</html>

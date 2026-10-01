@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Register</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="auth-body">
+    <div class="auth-container">
+      <div class="auth-card">
+        <img src="./assets/logo.svg" alt="MuscleMap" class="auth-logo" />
+        <h1>Create Account</h1>
+
+        <form id="registerForm">
+          <input type="text" name="name" placeholder="Username" required />
+
+          <input type="email" name="email" placeholder="Email" required />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">REGISTER</button>
+        </form>
+
+        <a href="login.html"> Already have account? </a>
+      </div>
+    </div>
+
+    <script src="./js/db.js"></script>
+    <script src="./js/auth.js"></script>
+  </body>
+</html>

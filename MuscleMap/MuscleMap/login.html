@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuscleMap Login</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="auth-body">
+    <div class="auth-container">
+      <div class="auth-card">
+        <img src="./assets/logo.svg" alt="MuscleMap" class="auth-logo" />
+        <h1>MuscleMap</h1>
+
+        <p>Human Anatomy Training System</p>
+
+        <form id="loginForm">
+          <input type="email" name="email" placeholder="Enter Email" required />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+
+          <button type="submit">LOGIN</button>
+        </form>
+
+        <a href="register.html"> Create Account </a>
+      </div>
+    </div>
+
+    <script src="./js/db.js"></script>
+    <script src="./js/auth.js"></script>
+  </body>
+</html>
